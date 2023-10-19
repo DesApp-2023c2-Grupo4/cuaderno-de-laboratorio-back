@@ -9,6 +9,7 @@ app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
 
+
 app.use(express.json());
 
 // Usa el enrutador de Persona.js para manejar las rutas definidas en ese archivo

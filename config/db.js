@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
-const scope = "local"
-const uri = `mongodb://localhost:27017/${scope}`;
+const scope = "CuadernoDeLaboratorio"
+const uri = `mongodb://127.0.0.1:27017/${scope}`;
 
-module.exports = () => {
+module.exports = async () => {
   const connect = () => {
     mongoose
       .connect(uri, { useNewUrlParser: true })
@@ -12,3 +12,4 @@ module.exports = () => {
   };
   connect();
 };
+
