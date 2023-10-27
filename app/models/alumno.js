@@ -7,12 +7,6 @@ const alumnoSchema = new Schema(
     apellido: String,
     dni: Number,
     email: String,
-    cursos: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Curso",
-      },
-    ],
   },
   {
     versionKey: false,
