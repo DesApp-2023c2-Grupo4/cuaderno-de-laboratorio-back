@@ -7,6 +7,12 @@ const cursoSchema = new Schema(
     horario: String,
     fechaInicio: Date,
     fechaFin: Date,
+    alumnos: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Alumno",
+      },
+    ],
     //materia
     //alumnos
   },
