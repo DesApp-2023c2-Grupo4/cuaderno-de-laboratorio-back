@@ -6,4 +6,6 @@ router.get('/tps', controller.getData);
 
 router.post('/tp', controller.insertData);
 
+router.get('/tp/:tpId/grupos', controller.getGruposByTpId);
+
 module.exports = router;

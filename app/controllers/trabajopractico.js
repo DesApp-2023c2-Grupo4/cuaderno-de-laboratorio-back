@@ -24,3 +24,21 @@ exports.insertData = async (req, res) => {
     res.send({ error: "Error" }, 422);
   }
 };
+
+// Obtener grupos de un trabajo practico por su ID
+exports.getGruposByTpId = async (req, res) => {
+  const tpId = req.params.tpId;
+
+  try {
+    // Busca al tp por su ID
+    const trabajoPractico = await model.findById(tpId).populate('grupos');
+
+    // Si se encontró al tp, obtén la lista de grupos
+    const grupos = trabajoPractico.grupos;
+
+    res.json({ grupos });
+  } catch (error) {
+    console.error(error);
+    res.status(404).json({ error: `Error al obtener los grupos para un tp ${tpId}` });
+  }
+};
