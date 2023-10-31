@@ -25,7 +25,6 @@ exports.insertData = async (req, res) => {
   }
 };
 
-
 // Obtener cursos de un profesor por su ID
 exports.getAlumnosByCursoId = async (req, res) => {
   const cursoId = req.params.cursoId;
@@ -43,3 +42,4 @@ exports.getAlumnosByCursoId = async (req, res) => {
     res.status(404).json({ error: `Error al obtener los alumnos para un curso ${cursoId}` });
   }
 };
+
