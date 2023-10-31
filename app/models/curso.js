@@ -14,7 +14,6 @@ const cursoSchema = new Schema(
       },
     ],
     //materia
-    //alumnos
   },
   {
     versionKey: false,

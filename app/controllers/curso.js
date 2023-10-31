@@ -37,7 +37,7 @@ exports.getAlumnosByCursoId = async (req, res) => {
     // Si se encontró al profesor, obtén la lista de cursos
     const alumnos = curso.alumnos;
 
-    res.json({ cursos });
+    res.json({ alumnos });
   } catch (error) {
     console.error(error);
     res.status(404).json({ error: `Error al obtener los alumnos para un curso ${cursoId}` });
