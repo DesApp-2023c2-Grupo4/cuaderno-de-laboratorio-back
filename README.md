@@ -11,8 +11,3 @@
 ## Levanta la aplicacion localmente.
 ´npm start´
 
-sprint 4 back
-/post agregar un tp 👌
-/get el backend tiene que ofrecer una lista de cursos para un docente 👌
-/get Lista de alumnos para un curso.(que alumnos están para cada curso) 
-/get Consultar los grupos de un TP..
