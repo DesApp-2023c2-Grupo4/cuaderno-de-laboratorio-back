@@ -1,4 +1,4 @@
-# Repo de Cero
+# Cuaderno de Laboratorio - Guía de Inicio Rápido 
 
 ## Antes de comenzar es necesario:
 
@@ -6,15 +6,15 @@
 2. [Instalar MongoDB Compass](https://www.mongodb.com/try/download/compass) herramienta gráfica oficial proporcionada por MongoDB para interactuar con bases de datos.
 
 ## Instala las dependencias Node del proyecto.
-´npm install´
+`npm install`
 
-# Si deseas insertar datos de prueba en la base de datos local, sigue estos pasos:
+## Si deseas insertar datos de prueba en la base de datos local, sigue estos pasos:
 
-* Ejecutar el archivo insertardatosmock.js con el siguiente comando:
+Ejecutar el archivo insertardatosmock.js con el siguiente comando:
 
-* ´node ./config/insertardatosmock.js´
+`node ./config/insertardatosmock.js`
 
 ## Levanta la aplicacion localmente.
-´npm start´
+`npm start`
 
 
