@@ -8,6 +8,13 @@
 ## Instala las dependencias Node del proyecto.
 ´npm install´
 
+# Si deseas insertar datos de prueba en la base de datos local, sigue estos pasos:
+
+* Ejecutar el archivo insertardatosmock.js con el siguiente comando:
+
+* ´node ./config/insertardatosmock.js´
+
 ## Levanta la aplicacion localmente.
 ´npm start´
+
 
