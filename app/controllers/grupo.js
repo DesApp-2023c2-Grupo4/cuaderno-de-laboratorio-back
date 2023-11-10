@@ -1,5 +1,5 @@
 const model = require("../models/grupo");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 exports.getData = async (req, res) => {
   try {
@@ -26,7 +26,6 @@ exports.insertData = async (req, res) => {
   }
 };
 
-
 //actualizar lista Alumnos De un grupo Por Id
 exports.actualizarListaAlumnos = async (req, res) => {
   const grupoId = req.params.grupoId;
@@ -35,13 +34,13 @@ exports.actualizarListaAlumnos = async (req, res) => {
   try {
     // Verificar si el ID del grupo está en el formato correcto
     if (!mongoose.Types.ObjectId.isValid(grupoId)) {
-      return res.status(400).json({ mensaje: 'ID de grupo inválido' });
+      return res.status(400).json({ mensaje: "ID de grupo inválido" });
     }
 
     // Crear una lista de objetos ObjectId a partir de los IDs de alumnos
-    const alumnosObjectId = alumnos.map(alumnoId => {
+    const alumnosObjectId = alumnos.map((alumnoId) => {
       if (!mongoose.Types.ObjectId.isValid(alumnoId)) {
-        return res.status(400).json({ mensaje: 'ID de alumno inválido' });
+        return res.status(400).json({ mensaje: "ID de alumno inválido" });
       }
       return new mongoose.Types.ObjectId(alumnoId); // Usa new aquí para crear un nuevo objeto ObjectId
     });
@@ -55,18 +54,17 @@ exports.actualizarListaAlumnos = async (req, res) => {
 
     // Verificar si el grupo fue encontrado y actualizado correctamente
     if (!grupoActualizado) {
-      return res.status(404).json({ mensaje: 'Grupo no encontrado' });
+      return res.status(404).json({ mensaje: "Grupo no encontrado" });
     }
 
-    res.status(200).json({ mensaje: 'Lista de alumnos actualizada exitosamente', grupoActualizado });
+    res
+      .status(200)
+      .json({
+        mensaje: "Lista de alumnos actualizada exitosamente",
+        grupoActualizado,
+      });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ mensaje: 'Error interno del servidor' });
+    res.status(500).json({ mensaje: "Error interno del servidor" });
   }
 };
-
-
-
-
-
-
